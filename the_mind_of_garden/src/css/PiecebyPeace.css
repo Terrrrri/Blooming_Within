@@ -1,0 +1,152 @@
+/* 整体游戏界面样式 */
+.puzzle-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  margin: auto;
+  background: rgba(0, 0, 0, 0.2); /* 半透明背景 */
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* 拼图块样式 */
+.puzzle-piece {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: 600px 600px;
+  cursor: grab;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: left 0.2s ease-in-out, top 0.2s ease-in-out, transform 0.1s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 拖拽时的状态 */
+.puzzle-piece:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+
+/* 透明背景的游戏介绍 */
+
+.intro-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  max-width: 550px;
+  background: rgba(255, 255, 255, 0.08); /* 透明玻璃背景 */
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+  font-size: 18px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.intro-container h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #ffdd55; /* 柔和金色标题 */
+  font-weight: bold;
+  text-shadow: 0 3px 5px rgba(255, 221, 85, 0.4);
+}
+
+.intro-container p {
+  margin: 12px 0;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+/* 开始游戏按钮 */
+.start-button {
+  background: linear-gradient(135deg, #ffcc00, #ff7700);
+  color: white;
+  font-size: 18px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+.start-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 7px 20px rgba(255, 204, 0, 0.5);
+}
+
+/* Congratulations 界面 */
+.congrats-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  max-width: 550px;
+  background: rgba(255, 255, 255, 0.08); /* 透明玻璃背景 */
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+  font-size: 18px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.congrats-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.congrats-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* 🎯 按钮样式（和 intro 界面统一） */
+.menu-button {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}

@@ -1,0 +1,142 @@
+/* Full-Screen Transparent Container */
+.ending-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: transparent;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* More Info Button */
+.more-info-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #6a357e; /* Slightly darker purple */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.more-info-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Floating Text Box - Wider, Shorter, Darker Background */
+.text-box {
+    position: absolute;
+    bottom: 2%; /* Keep it near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%; /* Increased width */
+    max-width: 1000px; /* Made wider */
+    min-height: 100px; /* Made shorter */
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: rgba(236, 242, 231, 0.7); /* Darker background for contrast */
+    box-shadow: 0 4px 10px rgba(234, 246, 234, 0.3);
+    font-size: 20px;
+    font-family: Georgia, serif; 
+    line-height: 1.4;
+    color: #080808; /* Darker text for better readability */
+    text-align: left; /* Left-aligned text */
+}
+
+/* Responsive Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+    .text-box {
+        font-size: 16px;
+        padding: 10px 15px;
+        bottom: 1%; /* Keep it lower on small screens */
+        width: 98%;
+        max-width: 95%;
+        min-height: 80px; /* Slightly shorter for mobile */
+    }
+    .more-info-btn {
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Fade-Out Effect Removed */
+.fade-out {
+    opacity: 0;
+}
+
+
+
+
+/* Ending 过渡动画 - 完全透明背景 */
+.ending-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: transparent; /* 让背景完全透明 */
+    color: #ffffff; /* 确保文本在深色背景下可见 */
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* 标题样式 */
+.ending-intro h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* 让文字在透明背景上清晰可见 */
+}
+
+/* 文字内容 */
+.ending-intro p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* 玫瑰图片 */
+.bloomed-rose {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3)); /* 增强可见度 */
+}
+
+/* 按钮样式 */
+.continue-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(52, 152, 219, 0.8); /* 半透明按钮 */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.continue-button:hover {
+    background: rgba(41, 128, 185, 1); /* 悬停时按钮更深 */
+    transform: scale(1.05);
+}
+
+/* 进入 Ending 时的渐隐 */
+.fade-out {
+    opacity: 0;
+}

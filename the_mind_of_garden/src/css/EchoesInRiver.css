@@ -1,0 +1,56 @@
+/* EchoesInRiver.css */
+  .answer-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .answer-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .answer-button:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 600px) {
+    .character-image {
+      width: 80px;
+    }
+    
+    .answer-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  .characters-container_test {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-bottom: 20px;
+    background: transparent; /* 让角色背景透明 */
+  }
+
+  .character-image {
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out; /* 添加平滑过渡效果 */
+  }
+  
+  .character-image.active {
+    opacity: 1; /* 说话的角色完全可见 */
+  }
+  
+  .character-image.inactive {
+    opacity: 0.3; /* 不说话的角色变半透明 */
+  }
+  
+  

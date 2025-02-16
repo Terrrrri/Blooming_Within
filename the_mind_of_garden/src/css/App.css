@@ -1,0 +1,94 @@
+/* main bg */
+.app-container {
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row; /* left content parallel with rose */
+  position: relative;
+}
+
+/* left game content */
+.game-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 70%;
+  overflow-y: auto;
+  color: white;
+  z-index: 100;
+}
+
+/* flower status on the top right */
+.flower-status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  z-index: 1000;
+  width: 180px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* flower picture */
+.flower-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* text attibute */
+.attribute-summary p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* NPC picture */
+.npc-image {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+/* Menu button */
+.menu-button {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+}
+
+.attribute-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between rows */
+}
+
+.attribute-summary p {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.attribute-icon {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+  margin-right: 8px; /* Space between icon and text */
+}
